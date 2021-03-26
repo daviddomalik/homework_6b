@@ -1,5 +1,6 @@
 .row {
-    height: 280px;
+    height: calc((100vh - 154px) / 3);
+    min-height: 280px;
     display: flex;
 }
 

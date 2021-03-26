@@ -4,6 +4,7 @@
 
 .col {
     width: calc(100% / 3);
+    height: calc(100vh - 154px);
     padding: 60px;
 }
 
@@ -14,13 +15,14 @@
 
 #image img {
     width: 100%;
-    height: 100%;
+    height: calc(100% + 120px);
     object-fit: cover;
 }
 
 /* Tags */
 h1 {
     font-size: 48px;
+    margin-top: 24px;
     margin-bottom: 32px;
 }
 
@@ -36,7 +38,16 @@ button {
     margin: 20px;
 }
 
+#content a:hover {
+    color: var(--accent);
+}
+
 /* Middle column */
+#middle-col {
+    padding: 60px;
+    padding-right: 30px;
+}
+
 .input {
     padding-bottom: 16px;
 }
@@ -83,6 +94,8 @@ button {
 
 /* Right column */
 #right-col {
+    padding: 60px;
+    padding-left: 0px;
     display: flex;
 }
 
