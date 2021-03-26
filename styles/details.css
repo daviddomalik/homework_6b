@@ -51,6 +51,7 @@ button {
 }
 
 /* Accordion */
+/* Adapted from https://www.w3schools.com/howto/howto_js_accordion.asp */
 .accordion {
     color: var(--darkest);
     background-color: rgba(0,0,0,0);
@@ -60,26 +61,24 @@ button {
     width: 100%;
     text-align: left;
     border-width: 2px;
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-left-style: none;
+    border-style: none;
+    border-top-style: solid;
     transition: 0.2s;
 }
 
-#top-accordion {
-    border-top-style: solid;
-}
-
-.accordion:hover {
+.active-accordion, .accordion:hover {
     background-color: var(--lightest);
     color: var(--darkest);
-    transition: 0.2s;
+    /* transition: 0.2s; */
 }
 
 .panel {
     display: none;
     overflow: hidden;
+}
+
+.open {
+    display: block;
 }
 
 /* Right column */
