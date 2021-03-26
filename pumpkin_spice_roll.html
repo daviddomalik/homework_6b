@@ -6,15 +6,23 @@
         <link href="styles/common.css" rel="stylesheet" type="text/css">
         <link href="styles/details.css" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/common.js"></script>
         <script src="js/details.js"></script>
         <title>Pumpkin Spice Roll | Bun Bun Bake Shop</title>
     </head>
     <body>
         <!-- Header -->
-        <a href="index.html" id="header">
-            <p class="title">Bun Bun</p>
-            <p class="subtitle">Bake Shop</p>
-        </a>
+        <div id="header">
+            <div></div>
+            <a href="index.html" id="logo">
+                <p class="title">Bun Bun</p>
+                <p class="subtitle">Bake Shop</p>
+            </a>
+            <div id="cart">
+                <img src="img/cart.svg">
+                <p id="count">0 items</p>
+            </div>
+        </div>
         <div id="content">
             <!-- Left column: item image -->
             <div id="image" class="col">

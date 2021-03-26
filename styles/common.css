@@ -50,10 +50,35 @@ a:hover {
 #header {
     padding: 16px;
     background-color: var(--darkest);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cart {
+    padding-right: 32px;
+    margin-left: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+#cart img {
+    height: 80px;
+    width: 80px;
+}
+
+#cart p {
+    width: min-content;
+    white-space: nowrap;
+    color: var(--lighter);
+    font-weight: 500;
+    margin: 8px 0px 0px auto;
 }
 
 .title {
