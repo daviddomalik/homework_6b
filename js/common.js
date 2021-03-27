@@ -24,8 +24,6 @@ function Roll(type, glaze, quantity) {
     this.quantity = quantity;
 }
 
-var cart = Array();
-
 function addToCart(type) {
     var glaze = $("#glaze").val();
     var quantity = $("#quantity").val();
@@ -33,14 +31,19 @@ function addToCart(type) {
 }
 
 function post(type, glaze, quantity) {
+    cart = JSON.parse(localStorage.getItem("cart"));
     cart.push(new Roll(type, glaze, quantity));
     localStorage.setItem("cart", JSON.stringify(cart));
     $("#count").text(cart.length + " items");
 }
 
 $(document).ready(function() {
-    if (cart !== null) {
-        cart = JSON.parse(localStorage.getItem("cart"));
+    var cart = JSON.parse(localStorage.getItem("cart"));
+
+    if (cart === null) {
+        cart = Array();
+        localStorage.setItem("cart", JSON.stringify(cart));
+    } else {
         $("#count").text(cart.length + " items");
     }
 });
