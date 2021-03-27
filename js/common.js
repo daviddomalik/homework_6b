@@ -1,3 +1,4 @@
+// Dictionaries to match cinnamon roll types to images
 var images = {
     "original": "rolls1.jpg",
     "walnut": "rolls2.png",
@@ -16,6 +17,7 @@ var image_alts = {
     "gluten-free": "Gluten-Free Roll",
 }
 
+// Object declaration
 function Roll(type, glaze, quantity) {
     this.type = type;
     this.image = "img/" + images[type];
@@ -24,12 +26,14 @@ function Roll(type, glaze, quantity) {
     this.quantity = quantity;
 }
 
+// Pulls data about new order added to cart from product details pages
 function addToCart(type) {
     var glaze = $("#glaze").val();
     var quantity = $("#quantity").val();
     post(type, glaze, quantity);
 }
 
+// Pushes new rolls to cart array
 function post(type, glaze, quantity) {
     cart = JSON.parse(localStorage.getItem("cart"));
     cart.push(new Roll(type, glaze, quantity));
