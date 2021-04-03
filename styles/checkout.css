@@ -36,6 +36,7 @@ td {
     text-transform: capitalize;
 }
 
+/* Tax and Total headings at the bottom of the table */
 td span.sumHeader {
     display: block;
     width: 100%;

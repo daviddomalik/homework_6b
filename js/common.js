@@ -34,6 +34,7 @@ function addToCart(type) {
     post(type, glaze, quantity);
 }
 
+// Calculates the price of an item based on glaze and quantity selection
 function calculatePrice(glaze, quantity) {
     var price;
     
@@ -71,9 +72,11 @@ $(document).ready(function() {
     var cart = JSON.parse(localStorage.getItem("cart"));
 
     if (cart === null) {
+        // Create a cart if it doesn't exist
         cart = Array();
         localStorage.setItem("cart", JSON.stringify(cart));
     } else {
+        // Show number of items in cart in the top right
         $("#count").text(cart.length + " items");
     }
 });
