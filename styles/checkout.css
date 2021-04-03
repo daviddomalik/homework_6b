@@ -32,8 +32,15 @@ th {
     text-align: left;
 }
 
-.sumHeader {
+td {
+    text-transform: capitalize;
+}
+
+td span.sumHeader {
+    display: block;
+    width: 100%;
     text-align: right;
+    font-weight: 500;
 }
 
 #total {

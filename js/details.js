@@ -4,26 +4,7 @@
 function updatePrice() {
     var glaze = $("#glaze").val();
     var quantity = $("#quantity").val();
-    var price;
-    
-    switch(quantity) {
-        case "1":
-            price = 2;
-            break;
-        case "3":
-            price = 5;
-            break;
-        case "6":
-            price = 9;
-            break;
-        case "12":
-            price = 16;
-            break;
-    }
-
-    if (glaze !== 'None') {
-        price += 1;
-    }
+    var price = calculatePrice(glaze, quantity);
 
     $("#price").text("$" + price);
 }

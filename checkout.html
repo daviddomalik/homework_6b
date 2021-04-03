@@ -7,6 +7,7 @@
         <link href="styles/checkout.css" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/common.js"></script>
+        <script src="js/checkout.js"></script>
         <title>Original Roll | Bun Bun Bake Shop</title>
     </head>
     <body>
@@ -23,21 +24,15 @@
             <div id="left-col">
                 <h1>Checkout</h1>
                 <table>
-                    <tr>
+                    <thead>
                         <th>Item</th>
                         <th>Glaze</th>
                         <th>Quantity</th>
                         <th>Price</th>
                         <th></th>
-                    </tr>
-                    <tr>
-                        <td>Original</td>
-                        <td>None</td>
-                        <td>6</td>
-                        <td>$9</td>
-                        <td><h6>DELETE</h6></td>
-                    </tr>
-                    <tr>
+                    </thead>
+                    <tbody id="items">
+                        <!-- <tr>
                         <td></td>
                         <td></td>
                         <th class="sumHeader">Tax</th>
@@ -50,7 +45,8 @@
                         <th class="sumHeader">Total</th>
                         <td id="total">$9.50</td>
                         <td></td>
-                    </tr>
+                    </tr> -->
+                    </tbody>
                 </table>
             </div>
             <!-- Billing and Delivery Info -->

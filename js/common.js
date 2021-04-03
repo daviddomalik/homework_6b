@@ -30,7 +30,33 @@ function Roll(type, glaze, quantity) {
 function addToCart(type) {
     var glaze = $("#glaze").val();
     var quantity = $("#quantity").val();
+
     post(type, glaze, quantity);
+}
+
+function calculatePrice(glaze, quantity) {
+    var price;
+    
+    switch(quantity) {
+        case "1":
+            price = 2;
+            break;
+        case "3":
+            price = 5;
+            break;
+        case "6":
+            price = 9;
+            break;
+        case "12":
+            price = 16;
+            break;
+    }
+
+    if (glaze !== 'None') {
+        price += 1;
+    }
+
+    return price;
 }
 
 // Pushes new rolls to cart array
