@@ -80,7 +80,6 @@ button {
 .active-accordion, .accordion:hover {
     background-color: var(--lightest);
     color: var(--darkest);
-    /* transition: 0.2s; */
 }
 
 .panel {

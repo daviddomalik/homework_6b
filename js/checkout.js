@@ -58,7 +58,7 @@ function loadTable() {
         tax = totalCost * 0.07;
         tax = tax.toFixed(2);
         createTableRow("", "", "<span class='sumHeader'>Tax</span>", "$" + tax, "");
-        totalCost += tax;
+        totalCost += parseFloat(tax);
         createTableRow("", "", "<span class='sumHeader'>Total</span>", "<span id='total'>$" + totalCost + "</span>", "");
     }
 }
